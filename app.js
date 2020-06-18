@@ -42,6 +42,13 @@ const EliminarDB = ( actividad ) => {
  arrayActividades.splice(indexArray, 1);
  GuardarDB();
 }
+const EditarDB = ( actividad ) => {
+   let indexArray = arrayActividades.findIndex((element) => {
+   return element.actividad === actividad;
+   });
+   arrayActividades[indexArray].estado = true;
+   GuardarDB();
+}
 
 //EventListener
 formularioUI.addEventListener("submit", (e) => {
@@ -61,7 +68,7 @@ listaActividadesUI.addEventListener("click", (e) => {
 	    EliminarDB(text);
 	}
         if(e.target.innerHTML === 'done'){
-
+	   EditarDB(text);
 	}
   }
 });
