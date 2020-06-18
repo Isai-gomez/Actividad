@@ -25,8 +25,12 @@ const PintarDB = () => {
     arrayActividades = [];
   } else {
     arrayActividades.forEach((element) => {
-      listaActividades.innerHTML += `<div class="alert alert-danger" role="alert"><span><span class="material-icons float-left mr-2">schedule</span><b>${element.actividad}</b> -${element.estado}<span class="float-right"><span class="material-icons">done</span><span class="material-icons">delete_forever</span></span></span></div>`;
-    });
+      if(element.estado){
+          listaActividades.innerHTML += `<div class="alert alert-success" role="alert"><span><span class="material-icons float-left mr-2">schedule</span><b>${element.actividad}</b> -${element.estado}<span class="float-right"><span class="material-icons">done</span><span class="material-icons">delete_forever</span></span></span></div>`;
+ }else{
+       listaActividades.innerHTML += `<div class="alert alert-danger" role="alert"><span><span class="material-icons float-left mr-2">schedule</span><b>${element.actividad}</b> -${element.estado}<span class="float-right"><span class="material-icons">done</span><span class="material-icons">delete_forever</span></span></span></div>`;
+ }
+         });
   }
 };
 
