@@ -38,7 +38,9 @@ const EliminarDB = ( actividad ) => {
      console.log(indexArray);
     }
 
-   })
+   });
+ arrayActividades.splice(indexArray, 1);
+ GuardarDB();
 }
 
 //EventListener
