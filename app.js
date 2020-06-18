@@ -30,6 +30,17 @@ const PintarDB = () => {
   }
 };
 
+const EliminarDB = ( actividad ) => {
+  let indexArray;
+   arrayActividades.forEach((element, index) => {
+    if(element.actividad === actividad){
+      indexArray = index;
+     console.log(indexArray);
+    }
+
+   })
+}
+
 //EventListener
 formularioUI.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -41,5 +52,14 @@ formularioUI.addEventListener("submit", (e) => {
 document.addEventListener("DOMContentLoaded", PintarDB);
 listaActividadesUI.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(e.path[2].childNodes[1].innerHTML);
+  if(e.target.innerHTML === 'done' || e.target.innerHTML === 'delete_forever'){
+	let text = e.path[2].childNodes[1].innerHTML;
+        if(e.target.innerHTML === 'delete_forever'){
+	    // Accion de eliminar
+	    EliminarDB(text);
+	}
+        if(e.target.innerHTML === 'done'){
+
+	}
+  }
 });
