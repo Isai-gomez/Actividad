@@ -19,7 +19,7 @@ function pintarTable(datos){
       <th scope="row">${id}</th>
       <td>${nombre}</td>
       <td>${email}</td>
-      <td>${estado ? "Activo": "Debaja"}</td>
+      <td>${estado ? "Activo": "Eliminado"}</td>
     </tr>`
    }
 }
