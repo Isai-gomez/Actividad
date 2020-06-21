@@ -1,0 +1,45 @@
+[
+  {
+  "id":1,
+  "nombre": "Isai",
+  "email": "isai@gmail.com",
+  "estado": true
+  },
+
+  {
+  "id":2,
+  "nombre": "Katia",
+  "email": "katia@gmail.com",
+  "estado": false  
+  },
+  {
+  "id": 3,
+  "nombre":"Alba",
+  "email": "alba@gmail.com",
+  "estado" :true
+  },
+  {
+        "id": 4,
+        "nombre": "Harry",
+        "email": "harry@bluuweb.cl",
+        "estado": false
+    },
+    {
+        "id": 5,
+        "nombre": "Debra",
+        "email": "deb@bluuweb.cl",
+        "estado": false
+    },
+    {
+        "id": 6,
+        "nombre": "Dexter",
+        "email": "dex@bluuweb.cl",
+        "estado": true
+    },
+    {
+        "id": 7,
+        "nombre": "Rita",
+        "email": "rita@bluuweb.cl",
+        "estado": true
+    }
+]
