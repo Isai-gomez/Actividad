@@ -39,7 +39,6 @@ const EliminarDB = ( actividad ) => {
    arrayActividades.forEach((element, index) => {
     if(element.actividad === actividad){
       indexArray = index;
-     console.log(indexArray);
     }
 
    });
@@ -58,10 +57,13 @@ const EditarDB = ( actividad ) => {
 formularioUI.addEventListener("submit", (e) => {
   e.preventDefault();
   let actividadUI = document.querySelector("#actividad").value;
+ if(actividadUI === ''){
+  alert('Rellenar campo')
+ }else{
   CrearItem(actividadUI);
   GuardarDB();
   formularioUI.reset();
-});
+ }});
 document.addEventListener("DOMContentLoaded", PintarDB);
 listaActividadesUI.addEventListener("click", (e) => {
   e.preventDefault();
