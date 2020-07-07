@@ -11,11 +11,13 @@ const app = new Vue({
    nombre: this.nuevaTarea,
    estado:false
    });
-   console.log(this.tareas)
-  nuevaTarea=""
+  nuevaTarea='';
   },
   editarTarea: function(index){
    this.tareas[index].estado = true; 
+  },
+  eliminarTarea: function(index){
+  this.tareas.splice(index,1);
   }
   }
 
