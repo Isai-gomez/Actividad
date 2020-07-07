@@ -13,6 +13,10 @@ const app = new Vue({
    });
    console.log(this.tareas)
   nuevaTarea=""
+  },
+  editarTarea: function(index){
+   this.tareas[index].estado = true; 
   }
   }
+
 });
