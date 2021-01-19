@@ -1,3 +1,4 @@
+//Crear paginawed
 //Varialbles globales
 const formularioUI = document.querySelector("#formulario");
 const listaActividadesUI = document.querySelector("#listaActividades");
